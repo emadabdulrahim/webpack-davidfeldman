@@ -1,0 +1,40 @@
+%link {
+  display: inline-block;
+  touch-action: manipulation;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+
+%flex {
+  display: flex;
+}
+%flexY {
+  @extend %flex;
+  align-items: center;
+}
+
+%flexX {
+  @extend %flex;
+  justify-content: center;
+}
+
+%flexXY {
+  @extend %flexY;
+  @extend %flexX;
+}
+
+%flexBetween {
+  @extend %flex;
+  justify-content: space-between;
+}
+
+%flexBetweenY {
+  @extend %flexBetween;
+  @extend %flexY;
+}
+
+%flexColumn {
+  @extend %flex;
+  flex-direction: column;
+}

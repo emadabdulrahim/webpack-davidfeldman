@@ -1,0 +1,67 @@
+@import '../styles/_variables';
+
+.link {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.container {
+  position: relative;
+  --size: 56px;
+  --background-offset: -2px;
+
+  @extend %link;
+  @include circleSize(var(--size));
+  position: relative;
+  background: transparent;
+  // box-shadow: 0 0 0 1px var(--logo-border-color);
+
+  &::before {
+    content: '';
+    position: absolute;
+    @include circleSize(var(--size));
+    // background: #b2601d;
+    top: var(--background-offset);
+    left: var(--background-offset);
+    z-index: -1;
+    transition: all $trans-short $spoof;
+    will-change: top, left;
+  }
+
+  &:hover {
+    --background-offset: 0;
+  }
+}
+
+.logo_ornament {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: visible;
+  fill: var(--logo-color);
+  stroke-width: 0.3%;
+  stroke: var(--logo-color);
+}
+
+.text {
+  --logo-font-size: #{$font-size-6};
+
+  margin-top: -2px;
+  font-size: var(--logo-font-size);
+  letter-spacing: 0.06em;
+  font-weight: $font-normal;
+  color: var(--logo-color);
+}
+
+@media (max-width: 700px) {
+  .container {
+    --size: 28px;
+  }
+
+  .text {
+    --logo-font-size: #{$font-size-3};
+  }
+}

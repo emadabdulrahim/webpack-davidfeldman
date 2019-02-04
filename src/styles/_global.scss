@@ -1,0 +1,28 @@
+@import './_colors';
+@import './_typography';
+
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+body {
+  --link-color: #{$color-text-body};
+  --link-cta-color: #{$brown-base};
+  --separator-color: #{$color-border-medium};
+  --logo-color: #{$brown-base};
+
+  color: $color-text-body;
+  font-family: $font-primary;
+  font-size: $font-size-5;
+  line-height: $line-height-body;
+  -webkit-font-smoothing: antialiased;
+  background-color: $color-bg-lightest;
+  height: 100%;
+
+  // This needs to come after -webkit-font-smoothing
+  -moz-osx-font-smoothing: grayscale;
+
+  text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}

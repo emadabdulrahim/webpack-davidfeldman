@@ -1,18 +1,51 @@
 import React from 'react'
-import ReactDOM from 'react-dom'
+import { Route, BrowserRouter } from 'react-router-dom'
+import { render } from 'react-dom'
+import schema from './schema'
+import AppContext from './context'
+import App from './app'
+import './styles/_main.scss'
 
-class App extends React.Component {
+class Index extends React.Component {
+  state = { feed: [], isFetching: false }
+
   componentDidMount() {
-    fetch('/api/getUsername')
+    const { feed } = this.state
+    if (feed.length > 0) {
+      return
+    }
+
+    this.fetchBlogFeed()
+  }
+
+  fetchBlogFeed = () => {
+    this.setState(state => ({
+      ...state,
+      isFetching: true,
+    }))
+    console.log('fetching called')
+
+    fetch('/api/blog')
       .then(res => res.json())
-      .then(console.log)
+      .then(result => {
+        this.setState(state => ({
+          ...state,
+          feed: schema(result),
+          isFetching: false,
+        }))
+      })
+      .catch(console.log)
   }
 
   render() {
-    return <h1>NodeJS + React</h1>
+    return (
+      <BrowserRouter>
+        <AppContext.Provider value={this.state}>
+          <Route path="/" component={App} />
+        </AppContext.Provider>
+      </BrowserRouter>
+    )
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'))
-
-module.hot.accept()
+render(<Index />, document.getElementById('app'))

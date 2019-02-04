@@ -1,0 +1,36 @@
+@import '../../styles/_variables';
+
+.section {
+  padding: $spacing-12 0;
+  background-color: #1b1917;
+  box-shadow: inset 0 5px 0 -2px $brown-base;
+  padding-bottom: 200px;
+}
+
+.layout {
+  display: flex;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 500px;
+}
+
+.page_title {
+  margin-bottom: 1em;
+  color: $color-main-light;
+}
+
+.heading {
+  color: $color-text-lightest;
+  font-weight: $font-normal;
+}
+
+.avatar {
+  position: relative;
+  max-width: 500px;
+  margin-left: $spacing-7;
+  width: 100%;
+}

@@ -1,0 +1,203 @@
+@import '../../styles/_variables';
+
+$border-muted: 1px solid #6756434a;
+
+.section {
+  box-shadow: inset 0 5px 0 -2px $color-bg-light;
+  padding-top: $spacing-12;
+}
+
+.layout {
+  display: flex;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.heading_container {
+  flex: 1.1;
+  margin-top: -32px;
+}
+
+.super_title {
+  margin-bottom: 1em;
+  color: $color-main-light;
+}
+
+.title {
+  color: $color-text-lightest;
+  margin-bottom: 1em;
+}
+
+.avatar {
+  flex: 1;
+}
+
+.cta_container {
+  position: relative;
+  display: flex;
+  font-size: $font-size-8;
+  color: lighten($brown-base, 15%);
+}
+
+.cta_icon.cta_icon {
+  @include square(20px);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-160%, -50%);
+}
+
+.cta {
+  font-size: $font-size-8;
+  text-transform: initial;
+  letter-spacing: 0.02em;
+  font-weight: $font-semi;
+  color: currentColor;
+}
+
+.cta_text {
+  color: $color-main-light;
+}
+
+.content {
+  border-top: $border-muted;
+  border-bottom: $border-muted;
+  padding: 48px 0;
+  color: $color-text-midlight;
+}
+
+.blurb_big {
+  font-size: $font-size-9;
+  margin-bottom: 1em;
+}
+
+.blurb {
+  font-size: $font-size-9;
+  max-width: 35em;
+  margin-bottom: 1.5em;
+}
+
+.topics_list {
+  column-count: 2;
+  list-style: circle;
+  list-style-position: inside;
+}
+
+.list_item {
+  font-size: $font-size-7;
+
+  & + & {
+    margin-top: 0.5em;
+  }
+}
+
+.video_section {
+  padding: 32px 0;
+}
+
+.section_title {
+  color: $color-text-light;
+}
+
+.video_buttons_container {
+  margin-top: 16px;
+  margin-bottom: 32px;
+  display: flex;
+}
+
+.video_button {
+  & + & {
+    margin-left: $spacing-5;
+  }
+}
+
+.video_button_on {
+  background: $color-bg-light;
+  color: $color-text-heading;
+}
+
+.video_container {
+  --video-offset: -58px;
+  width: 100%;
+  padding-bottom: 50.25%;
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  margin-bottom: var(--video-offset);
+  transition: margin $trans-short $spoof;
+}
+
+.video_playing {
+  margin-bottom: 0;
+
+  & .video {
+    top: 0;
+  }
+}
+
+.video {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: var(--video-offset);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: top $trans-short $spoof;
+}
+
+.other_links {
+  margin-bottom: 48px;
+  padding-bottom: 48px;
+  border-bottom: $border-muted;
+}
+
+.section_subtitle {
+  font-size: $font-size-9;
+  font-family: $font-display;
+  color: $color-text-light;
+  margin-bottom: 0.5em;
+}
+
+.small_link {
+  color: $color-text-midlight;
+  display: inline-block;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  font-size: $font-size-7;
+}
+
+.other_talks_list {
+  padding: $spacing-5 0;
+}
+
+.other_talk_list_item {
+  & + & {
+    margin-top: 0.5em;
+  }
+}
+
+.contact {
+  margin-bottom: 48px;
+}
+
+.contact_heading {
+  flex: 1;
+}
+
+.contact_layout {
+  display: flex;
+}
+
+.section_blurb {
+  max-width: 20em;
+  font-size: $font-size-7;
+}
+
+.form {
+  flex: 1.5;
+  margin-top: 16px;
+  margin-left: 48px;
+}

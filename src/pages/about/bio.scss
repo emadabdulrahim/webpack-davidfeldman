@@ -1,0 +1,56 @@
+@import '../../styles/_variables';
+
+.section {
+  max-width: calc(#{$max-width} - 32px) !important;
+  background-color: $white;
+  margin-top: -128px;
+}
+
+.content_container {
+  padding: 96px 0;
+  max-width: 700px;
+  margin: auto;
+}
+
+.content {
+  font-family: $font-display;
+  border-bottom: 1px solid $color-border-light;
+  margin-bottom: 40px;
+}
+
+%paragraph {
+  margin-bottom: 1.5em;
+}
+
+.blurb_big {
+  @extend %paragraph;
+  font-size: $font-size-8;
+  font-weight: 500;
+}
+
+.blurb {
+  @extend %paragraph;
+  font-size: $font-size-8;
+}
+
+.cta {
+  max-width: 700px;
+  margin: auto;
+}
+
+.button_group {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button_outline {
+  display: flex;
+  padding: 0 32px;
+}
+
+.button_text {
+  font-size: $font-size-6;
+  font-weight: 500;
+  margin-left: 8px;
+  letter-spacing: 0.02em;
+}

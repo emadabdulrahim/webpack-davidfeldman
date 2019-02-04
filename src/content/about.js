@@ -1,0 +1,14 @@
+export default {
+  intro: [
+    'I am fascinated by the human capacity for resilience and growth in the face of adversity. This interest began when, in the seventh grade, I borrowed a book from the library entitled The Social Brain. In it, neuropsychologist Michael Gazzaniga writes of patients who, because of severe epilepsy, underwent surgery to sever the corpus callosum, largely eliminating communication between cerebral hemispheres.',
+    'I was captivated by these patients not because of the deficits they suffered (which was the author’s principal focus), but because of the resilience they demonstrated. In fact, many of them continued to live relatively normal lives.',
+  ],
+  followup:
+    'Years later, this fascination is evident in my research interests, which concern the processes of coping with and making meaning of adversity. In terms of basic research, the importance that many individuals place on the meaning of their negative experiences has greatly impressed me. Topics such as causal attribution, appraisal theory, assumptive worldview theory, and posttraumatic growth fit nicely into this area of interest.',
+  hope: [
+    'I also am interested in the topic of hope, especially as it relates to serious medical illness. Research indicates that hope is a valuable asset throughout life. High-hope people tend to have better sports and academic performance, a greater likelihood of achieving their goals, lower levels of depression and anxiety, and a richer sense of life meaning than their low-hope counterparts. At no point is hope more important, however, than when people confront the possibility of death. Hope for cure motivates and inspires people to endure sometimes difficult but necessary medical treatment. Thus, hope may literally save lives.',
+    'When the prognosis becomes terminal, however, hope must be redefined in order to remain. Although very little research addresses the topic, terminally ill patients often appear to set aside hopes for cure and discover new hopes as their lives draw to a close--to make amends with estranged loved ones, become closer to God, or see the beach one last time, among many others. This potential blossoming of hope during a life stage that some consider hopeless moves and fascinates me.',
+  ],
+  last:
+    "Lastly, on the clinical front, I am interested in developing ways to maximize hope and meaning in psychotherapy. I have been involved in developing Hope Therapy, including both 8-session and single-session group versions of this therapy as well as techniques that can be applied in individual therapy settings. My colleagues and I have provided empirical evidence of Hope Therapy's efficacy in various populations, including community adult clients with a variety of psychopathologies as well as college students both in the United States and abroad.",
+}

@@ -1,0 +1,41 @@
+@import '../styles/_variables';
+
+.base {
+  @extend %link;
+  font-size: $font-size-4;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  display: block;
+  align-items: center;
+  overflow: hidden;
+  color: var(--link-color);
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    width: 100%;
+    background: currentColor;
+    margin-top: 2px;
+    transform-origin: 0 50%;
+    transform: scaleX(0);
+    transition: transform $trans-short $spoof;
+  }
+
+  &:hover {
+    &::after {
+      transform: scaleX(1);
+    }
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}
+
+.external_link_icon {
+  transform: translateY(45%);
+  fill: currentColor !important;
+  opacity: 0.5;
+  margin-left: $spacing-2;
+}

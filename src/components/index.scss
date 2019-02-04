@@ -1,0 +1,18 @@
+@import '../styles/_variables';
+
+.section_wrapper {
+  position: relative;
+  max-width: $max-width;
+  padding: 0 $gutter;
+  margin: 0 auto;
+  z-index: 1;
+}
+
+.separator {
+  margin: 0 $spacing-4;
+  margin-top: $spacing-1;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background-color: var(--separator-color);
+}

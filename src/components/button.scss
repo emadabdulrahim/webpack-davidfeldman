@@ -1,0 +1,63 @@
+@import '../styles/_variables';
+
+$color-button: $color-text-heading;
+
+$button-height: 46px;
+$button-height-large: 64px;
+$button-height-small: 40px;
+
+$button-padding: 24px;
+
+%button-dark {
+  color: $color-button;
+
+  &:hover {
+    background: $color-bg-dark;
+    color: $color-text-lightest;
+  }
+}
+
+%button-light {
+  color: $color-text-light;
+
+  &:hover {
+    background: $color-bg-light;
+    color: $color-text-heading;
+  }
+}
+
+.button {
+  @extend %button-dark;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-family: $font-primary;
+  font-size: $font-size-5;
+  padding: 0 $button-padding;
+  height: $button-height;
+  border: 1px solid currentColor;
+  letter-spacing: 0.02em;
+  text-transform: capitalize;
+  background: transparent;
+  vertical-align: middle;
+  -webkit-appearance: none;
+  -webkit-tap-highlight-color: transparent;
+  transform: opacity $trans-short $spoof;
+  cursor: pointer;
+
+  &:active {
+    opacity: 0.85;
+  }
+}
+
+.button__small {
+  height: $button-height-small;
+}
+
+.button__large {
+  height: $button-height-large;
+}
+
+.button__light {
+  @extend %button-light;
+}

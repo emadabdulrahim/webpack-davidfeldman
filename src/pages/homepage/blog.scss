@@ -1,0 +1,140 @@
+@import '../../styles/_variables';
+
+.section {
+  max-width: $max-width-wide;
+  margin: auto;
+  margin-bottom: 32px;
+  padding: 80px 0;
+  background-color: $white;
+}
+
+.heading_container {
+  margin-bottom: $spacing-10;
+}
+
+.blurb {
+  max-width: 26em;
+  font-size: $font-size-7;
+}
+
+.feed_wrapper {
+  max-width: 700px;
+  padding-left: $spacing-10;
+  margin-bottom: $spacing-10;
+  box-shadow: $brown-base 4px 0px 0px -1px inset;
+}
+
+.post_container {
+  padding: 40px 0;
+  list-style: none;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  & + & {
+    border-top: 1px solid $color-border-light;
+  }
+
+  &:last-child {
+    border-bottom: 1px solid $color-border-light;
+  }
+}
+
+.post_wrapper {
+  display: flex;
+  max-width: 800px;
+}
+
+.post_date {
+  flex: 1;
+  display: flex;
+  font-size: $font-size-7;
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+  min-width: 160px;
+}
+
+.post_title_link {
+  &:hover {
+    & .post_title {
+      text-decoration: underline;
+    }
+  }
+}
+
+.post_title {
+  display: inline;
+  font-size: $font-size-9;
+  font-weight: $font-bold;
+  color: $color-text-heading;
+  line-height: $line-height-heading;
+}
+
+.post_blurb {
+  font-size: $font-size-7;
+  margin-top: 0.5em;
+  margin-bottom: 1.25em;
+}
+
+.post_link {
+  font-size: $font-size-5;
+  text-transform: uppercase;
+  color: $red-base;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+}
+
+.link_big {
+  display: flex;
+  margin: auto;
+  color: $brown-base;
+  padding: 0 32px;
+  font-size: $font-size-6;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: $font-semi;
+
+  &:hover {
+    background: $brown-base;
+    color: $color-text-lightest;
+
+    & .arrow_container {
+      transform: translateX(5px);
+    }
+  }
+}
+
+.link_with_arrow {
+  position: relative;
+  display: block;
+
+  &::after {
+    content: '';
+  }
+}
+
+.arrow_container {
+  position: relative;
+  margin-top: 4px;
+  margin-left: 20px;
+  transition: transform 100ms ease-in;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 4px;
+    height: 2px;
+    border-radius: 999px;
+    background: currentColor;
+    top: 43%;
+    left: 0%;
+    transform: translate(-130%, -50%);
+  }
+}
+
+.arrow {
+  @include square(24px);
+  fill: currentColor;
+}

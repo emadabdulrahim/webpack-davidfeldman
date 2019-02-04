@@ -1,0 +1,99 @@
+@import '../styles/_variables';
+
+$color-input_placeholder: lighten($color-border-medium, 12%);
+
+.light {
+  --color-input: #{$color-main-light};
+  --color-input-border: #{$color-input_placeholder};
+  --color-input-border-focus: #{$color-main-light};
+  --color-label: #{$color-text-midlight};
+}
+
+.dark {
+  --color-input: #{$color-text-body};
+  --color-input-border: #{$color-input_placeholder};
+  --color-input-border-focus: #{$color-text-heading};
+  --color-label: #{$color-text-muted};
+}
+
+%input_style {
+  background: transparent;
+  border-bottom: 1px solid var(--color-input-border);
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  color: var(--color-input);
+  font-size: $font-size-5;
+
+  &:focus {
+    box-shadow: none;
+    border-bottom-color: var(--color-input-border-focus);
+  }
+}
+
+.form {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  & label {
+    margin-bottom: 4px;
+    color: var(--color-label) !important;
+    letter-spacing: 0.02em;
+  }
+
+  & input {
+    @extend %input_style;
+    width: 100%;
+  }
+
+  & textarea {
+    @extend %input_style;
+    padding: 4px 0;
+    resize: none;
+  }
+}
+
+.form_inputs {
+  margin-bottom: 32px;
+}
+
+.input_group {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.input_field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+
+  & + & {
+    margin-left: 32px;
+  }
+}
+
+.success_message {
+  background: $color-main6;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  transform: translateY(-130%) scale(1.4);
+}
+
+.success_message_title_super_title {
+  color: $color-text-body;
+}
+
+.success_message_title {
+  color: $color-text-light;
+}

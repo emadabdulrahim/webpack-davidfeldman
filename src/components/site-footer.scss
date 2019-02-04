@@ -1,0 +1,105 @@
+@import '../styles/_variables';
+
+.section {
+  background-color: $color-bg-dark;
+  padding: 64px 0;
+  color: $color-text-lightest;
+  --logo-color: #{$color-main-light};
+}
+
+.layout {
+  display: grid;
+  grid-template-areas:
+    'logo bigLinks'
+    'separator separator'
+    'empty links';
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: auto 1px auto;
+  grid-row-gap: 48px;
+}
+
+.links_big_container {
+  display: flex;
+  grid-area: bigLinks;
+}
+
+.link_big {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+
+  & + & {
+    margin-left: 24px;
+  }
+}
+
+.link_big_title {
+  font-size: $font-size-5;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.5em;
+}
+
+.link_big_blurb {
+  font-size: $font-size-6;
+  color: $color-text-muted;
+  margin-bottom: 2em;
+  flex: 1;
+}
+
+.link_big_link {
+  font-size: $font-size-3;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+
+  &::after {
+    content: '';
+    display: block;
+    height: 1px;
+    background: currentColor;
+    opacity: 0.3;
+    margin-top: 2px;
+  }
+
+  &:hover {
+    &::after {
+      opacity: 1;
+    }
+  }
+}
+
+.separator {
+  grid-area: separator;
+  background-color: $color-border-light;
+  height: 1px;
+}
+
+.secondary_links {
+  grid-area: links;
+  display: flex;
+  justify-content: space-between;
+  color: $color-text-muted;
+}
+
+.links_list {
+  display: flex;
+}
+
+.link {
+  color: currentColor;
+
+  & + & {
+    margin-left: $spacing-8;
+  }
+}
+
+.external_link_container {
+  display: flex;
+  align-items: flex-start;
+  margin-left: $spacing-8;
+}
+
+.social_icon {
+  fill: $color-text-muted;
+  @include square(24px);
+}

@@ -12,16 +12,41 @@ module.exports = {
         exclude: /node_modules/,
         use: ['babel-loader'],
       },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader', // creates style nodes from JS strings
+          {
+            loader: 'css-loader',
+            options: {
+              sourceMap: true,
+              modules: true,
+              localIdentName: '[local]___[hash:base64:5]',
+            },
+          }, // translates CSS into CommonJS
+          'sass-loader', // compiles Sass to CSS, using Node Sass by default
+        ],
+      },
+      {
+        test: /\.(png|jpg|gif|pdf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {},
+          },
+        ],
+      },
     ],
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
     alias: {
-      '@src': src,
-      '@components': path.join(src, 'components'),
-      '@pages': path.join(src, 'pages'),
-      '@static': path.join(src, 'static'),
-      '@styles': path.join(src, 'styles'),
+      src: src,
+      components: path.join(src, 'components'),
+      pages: path.join(src, 'pages'),
+      static: path.join(src, 'static'),
+      styles: path.join(src, 'styles'),
+      content: path.join(src, 'content'),
     },
   },
   output: {

@@ -1,0 +1,63 @@
+@import '../styles/_variables';
+
+%line {
+  --line-width: 24px;
+
+  content: '';
+  position: absolute;
+  width: var(--line-width);
+  height: 1px;
+  border-radius: $radius;
+  left: calc(var(--line-width) / 2);
+  background: #675643;
+  transition: width, transform $trans-short $spring;
+}
+
+.menu_sheet {
+  position: fixed;
+  top: 0;
+  bottom: 20%;
+  left: 0;
+  right: 0;
+  background-color: $color-bg-lightest;
+  transform: translateY(-100%);
+  z-index: 10;
+  overflow: hidden;
+}
+
+.icon {
+  @extend %link;
+  display: flex;
+  position: relative;
+  width: 48px;
+  height: 48px;
+  pointer-events: all;
+  border-radius: var(--radius);
+  outline: none;
+  vertical-align: baseline;
+  z-index: 15;
+
+  &:hover {
+    background: rgba($blue-light, 0.06);
+  }
+
+  &:before {
+    @extend %line;
+    top: 20px;
+  }
+
+  &:after {
+    @extend %line;
+    bottom: 20px;
+  }
+}
+
+.icon__open {
+  &:before {
+    transform: translateY(3px) rotate(135deg);
+  }
+
+  &:after {
+    transform: translateY(-3px) rotate(45deg);
+  }
+}
