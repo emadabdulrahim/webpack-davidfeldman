@@ -1,4 +1,7 @@
 const webpack = require('webpack')
+const path = require('path')
+
+const src = path.join(__dirname, 'src')
 
 module.exports = {
   entry: './src/index.js',
@@ -13,6 +16,13 @@ module.exports = {
   },
   resolve: {
     extensions: ['*', '.js', '.jsx'],
+    alias: {
+      '@src': src,
+      '@components': path.join(src, 'components'),
+      '@pages': path.join(src, 'pages'),
+      '@static': path.join(src, 'static'),
+      '@styles': path.join(src, 'styles'),
+    },
   },
   output: {
     path: __dirname + '/dist',
