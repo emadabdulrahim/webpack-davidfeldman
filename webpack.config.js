@@ -1,5 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const src = path.join(__dirname, 'src')
 
@@ -15,7 +16,7 @@ module.exports = {
       {
         test: /\.scss$/,
         use: [
-          'style-loader', // creates style nodes from JS strings
+          MiniCssExtractPlugin.loader, // creates style nodes from JS strings
           {
             loader: 'css-loader',
             options: {
@@ -54,7 +55,14 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle.js',
   },
-  plugins: [new webpack.HotModuleReplacementPlugin()],
+  plugins: [
+    new webpack.HotModuleReplacementPlugin(),
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: 'style.css',
+    }),
+  ],
   devServer: {
     contentBase: './dist',
     hot: true,

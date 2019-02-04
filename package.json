@@ -39,6 +39,7 @@
     "concurrently": "^4.1.0",
     "css-loader": "^2.1.0",
     "file-loader": "^3.0.1",
+    "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "nodemon": "^1.18.9",
     "react-hot-loader": "^4.6.5",
