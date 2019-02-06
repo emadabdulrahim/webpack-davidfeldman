@@ -19,7 +19,7 @@
   width: 100%;
   overflow: hidden;
   border-radius: 50%;
-  margin-bottom: $spacing-6;
+  margin-bottom: $spacing-5;
 }
 
 .profile_content {
@@ -29,18 +29,15 @@
 .name {
   font-family: $font-serif;
   font-size: $font-size-8;
-  margin-bottom: 0.25em;
   color: $color-text-heading;
 }
 
 .title {
   color: $brown-base;
-  margin-bottom: 0.35em;
 }
 
 .intro_blurb {
   position: relative;
-  font-size: $font-size-7;
   font-family: $font-serif;
   max-width: 33em;
 
@@ -54,5 +51,32 @@
     left: 50%;
     bottom: 0;
     transform: translate(-50%, 130%);
+  }
+}
+
+@include media-tablet-portait-only {
+  .name {
+    margin-bottom: -0.25em;
+  }
+}
+
+@include media-phone-only {
+  .section {
+    padding: $spacing-11 0;
+  }
+
+  .avatar {
+    --avatar-size: 65px;
+    margin-bottom: $spacing-4;
+  }
+
+  .name {
+    font-size: $font-size-6;
+  }
+
+  .intro_blurb {
+    &::after {
+      height: 70px;
+    }
   }
 }

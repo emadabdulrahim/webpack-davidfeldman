@@ -19,3 +19,9 @@ export const SectionSuperTitle = ({ children, className, ...rest }) => (
     {children}
   </h3>
 )
+
+export const SectionBlurb = ({ children, className, ...rest }) => (
+  <p className={cx(s.section_blurb, className)} {...rest}>
+    {children}
+  </p>
+)

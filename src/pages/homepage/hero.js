@@ -1,11 +1,11 @@
 import React from 'react'
-import { Hero } from 'components/typography'
-import { Container } from 'components'
+import { Hero, SectionBlurb } from 'components/typography'
+import { Container, Section } from 'components'
 import avatar from 'static/profile.jpg'
 import s from './hero.scss'
 
 export default () => (
-  <section className={s.section}>
+  <Section className={s.section}>
     <Container>
       <div className={s.profile_wrapper}>
         <figure className={s.avatar}>
@@ -14,7 +14,7 @@ export default () => (
         <div className={s.profile_content}>
           <h4 className={s.name}>David B. Feldman PhD</h4>
           <Hero className={s.title}>Author. Professor. Speaker.</Hero>
-          <p className={s.intro_blurb}>
+          <SectionBlurb className={s.intro_blurb}>
             David B. Feldman, PhD is a professor, author, speaker, host of the
             ‘Psychology in 10 Minutes’ podcast, and occasional host of ‘About
             Health’ on KPFA Radio in Berkeley, California. His research on how
@@ -25,9 +25,9 @@ export default () => (
             three books, lectured for organizations around the world, appeared
             on national television and radio, and writes regularly for
             <em>&nbsp;Psychology Today.</em>
-          </p>
+          </SectionBlurb>
         </div>
       </div>
     </Container>
-  </section>
+  </Section>
 )

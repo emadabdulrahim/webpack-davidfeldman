@@ -1,7 +1,11 @@
 import React from 'react'
 import Arrow from './arrow-right'
-import { SectionTitle, SectionSuperTitle } from 'components/typography'
-import { Container } from 'components'
+import {
+  SectionTitle,
+  SectionSuperTitle,
+  SectionBlurb,
+} from 'components/typography'
+import { Section, Container } from 'components'
 import { Link } from 'react-router-dom'
 import DFButton from 'components/button'
 import AppContext from '../../context'
@@ -22,7 +26,7 @@ const Post = ({ title, content, date, link }) => (
         </time>
         <h4 className={s.post_title}>{title}</h4>
       </a>
-      <p className={s.post_blurb}>{content}</p>
+      <SectionBlurb className={s.post_blurb}>{content}</SectionBlurb>
       <a
         className={s.post_link}
         href={link}
@@ -47,7 +51,7 @@ export const Feed = ({ limit }) => (
 )
 
 export default () => (
-  <section className={s.section}>
+  <Section className={s.section}>
     <Container>
       <div className={s.heading_container}>
         <Link to="/psychologyin10minutes">
@@ -59,10 +63,10 @@ export default () => (
             <span className={s.muted}>while you sip your morning coffee</span>
           </SectionTitle>
         </Link>
-        <p className={s.blurb}>
+        <SectionBlurb className={s.blurb}>
           We all yearn to know more about ourselves and better understand the
           thoughts, feelings, and behaviors of the people we care about.
-        </p>
+        </SectionBlurb>
       </div>
     </Container>
     <Container>
@@ -78,5 +82,5 @@ export default () => (
         </div>
       </DFButton>
     </Link>
-  </section>
+  </Section>
 )

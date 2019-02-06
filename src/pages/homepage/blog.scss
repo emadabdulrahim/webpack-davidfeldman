@@ -1,10 +1,6 @@
 @import '../../styles/_variables';
 
 .section {
-  max-width: $max-width-wide;
-  margin: auto;
-  margin-bottom: 32px;
-  padding: 80px 0;
   background-color: $white;
 }
 
@@ -14,7 +10,6 @@
 
 .blurb {
   max-width: 26em;
-  font-size: $font-size-7;
 }
 
 .feed_wrapper {
@@ -72,7 +67,6 @@
 }
 
 .post_blurb {
-  font-size: $font-size-7;
   margin-top: 0.5em;
   margin-bottom: 1.25em;
 }
@@ -137,4 +131,45 @@
 .arrow {
   @include square(24px);
   fill: currentColor;
+}
+
+@include media-phone-only {
+  .heading_container {
+    margin-bottom: $spacing-7;
+  }
+
+  .feed_wrapper {
+    padding-left: $spacing-5;
+    margin-bottom: $spacing-8;
+  }
+
+  .post_date {
+    font-size: $font-size-5;
+  }
+
+  .post_title {
+    font-size: $font-size-7;
+  }
+
+  .post_blurb {
+    margin-top: 0.3em;
+    margin-bottom: 0.65em;
+  }
+
+  .post_container {
+    padding: $spacing-5 0;
+  }
+
+  .post_link {
+    font-size: $font-size-4;
+  }
+
+  .link_big {
+    height: 50px;
+    font-size: $font-size-5;
+  }
+
+  .arrow_container {
+    margin-top: $spacing-3;
+  }
 }

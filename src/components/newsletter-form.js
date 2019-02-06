@@ -1,11 +1,21 @@
 import 'babel-polyfill'
 import React from 'react'
-import { TextInput, Button, Icon, toaster } from 'evergreen-ui'
-import DFButton from './button'
-import s from './newsletter-form.scss'
+import { toaster } from 'evergreen-ui'
 
-class NewsletterForm extends React.Component {
-  state = { email: '' }
+export const NewsletterContext = React.createContext()
+
+class NewsletterContainer extends React.Component {
+  constructor(props) {
+    super(props)
+
+    this.state = {
+      email: '',
+      actions: {
+        subscribe: this.subscribe,
+        handleInputChange: this.handleInputChange,
+      },
+    }
+  }
 
   sendRequest = (path, options = {}) => {
     const headers = {
@@ -37,7 +47,7 @@ class NewsletterForm extends React.Component {
     })
   }
 
-  handleChange = e => {
+  handleInputChange = e => {
     const { value } = e.target
 
     this.setState(() => ({
@@ -47,23 +57,11 @@ class NewsletterForm extends React.Component {
 
   render() {
     return (
-      <form className={s.form} onSubmit={this.subscribe}>
-        <div className={s.input_group}>
-          <Icon icon="envelope" className={s.input_icon} size={20} />
-          <TextInput
-            required
-            placeholder="Your email here"
-            onChange={this.handleChange}
-            value={this.state.email}
-            marginBottom={0}
-          />
-        </div>
-        <DFButton className={s.button} large type="submit">
-          Subscribe
-        </DFButton>
-      </form>
+      <NewsletterContext.Provider value={this.state}>
+        {this.props.children}
+      </NewsletterContext.Provider>
     )
   }
 }
 
-export default NewsletterForm
+export default NewsletterContainer

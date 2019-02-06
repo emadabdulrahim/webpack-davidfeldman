@@ -49,3 +49,5 @@ class Index extends React.Component {
 }
 
 render(<Index />, document.getElementById('app'))
+
+module.hot.accept()

@@ -1,5 +1,12 @@
 @import '../styles/_variables';
 
+.section {
+  max-width: $max-width-wide;
+  margin: auto;
+  margin-bottom: $spacing-7;
+  padding: 80px 0;
+}
+
 .section_wrapper {
   position: relative;
   max-width: $max-width;
@@ -15,4 +22,11 @@
   height: 4px;
   border-radius: 50%;
   background-color: var(--separator-color);
+}
+
+@include media-phone-only {
+  .section {
+    padding: $spacing-8 0;
+    margin-bottom: $spacing-6 px;
+  }
 }
