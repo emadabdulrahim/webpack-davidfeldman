@@ -11,9 +11,11 @@ export default () => (
         <figure className={s.avatar}>
           <img src={avatar} alt="headshot" />
         </figure>
-        <div className={s.profile_content}>
-          <h4 className={s.name}>David B. Feldman PhD</h4>
-          <Hero className={s.title}>Author. Professor. Speaker.</Hero>
+        <div>
+          <div className={s.profile_content}>
+            <h4 className={s.name}>David B. Feldman PhD</h4>
+            <Hero className={s.title}>Author. Professor. Speaker.</Hero>
+          </div>
           <SectionBlurb className={s.intro_blurb}>
             David B. Feldman, PhD is a professor, author, speaker, host of the
             ‘Psychology in 10 Minutes’ podcast, and occasional host of ‘About

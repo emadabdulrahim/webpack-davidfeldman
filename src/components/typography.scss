@@ -1,13 +1,12 @@
 @import '../styles/_variables';
 
 %display {
-  line-height: $line-height-heading;
+  line-height: var(--line-height-heading);
   font-family: $font-display;
 }
 
 .hero {
   @extend %display;
-  --font-hero: #{$font-hero};
   font-weight: $font-bold;
   margin-bottom: 0.2em;
 
@@ -16,7 +15,6 @@
 
 .section_title {
   @extend %display;
-  --font-section-title: #{$font-section-title};
   color: $color-text-heading;
   font-weight: $font-medium;
 
@@ -31,49 +29,20 @@
   text-transform: uppercase;
   margin-bottom: 1em;
 
-  --font-size: #{$font-size-4};
-
-  font-size: var(--font-size);
+  font-size: var(--font-size-4);
 }
 
 .section_blurb {
-  --font-blurb: #{$font-size-7};
-
-  font-size: var(--font-blurb);
+  font-size: var(--font-section-blurb);
   line-height: 1.5;
-}
-
-@include media-tablet-portait-only {
-  .hero {
-    --font-hero: #{$font-size-13};
-  }
-
-  .section_title {
-    --font-section-title: #{$font-size-11};
-  }
-
-  .section_super_title {
-    --font-size: #{$font-size-3};
-  }
 }
 
 @include media-phone-only {
   .hero {
-    --font-hero: #{$font-size-11};
-    line-height: 1.1;
     margin-bottom: 0.45em;
   }
 
-  .section_title {
-    --font-section-title: #{$font-size-9};
-  }
-
   .section_super_title {
-    --font-size: #{$font-size-2};
     margin-bottom: 0.5em;
-  }
-
-  .section_blurb {
-    --font-blurb: #{$font-size-5};
   }
 }

@@ -4,7 +4,7 @@ import BookCover1 from 'components/static/supersurvivors-bookcover'
 import BookCover2 from 'components/static/end-of-life-bookcover'
 import BookCover3 from 'components/static/public-speaking-bookcover'
 import { SectionTitle, SectionSuperTitle } from 'components/typography'
-import { Container } from 'components'
+import { Container, Section } from 'components'
 import { LinkExternal } from 'components/link'
 import Book1 from 'static/books/supersurvivors.jpg'
 import Book2 from 'static/books/end-of-life.jpg'
@@ -52,7 +52,7 @@ const Book = ({ title, slug, shortDescription, image, cover, link }) => {
 }
 
 export default () => (
-  <section className={s.section} id="books">
+  <Section className={s.section} id="books">
     <Container>
       <div className={s.heading_container}>
         <SectionSuperTitle>Books</SectionSuperTitle>
@@ -66,5 +66,5 @@ export default () => (
         ))}
       </ul>
     </div>
-  </section>
+  </Section>
 )

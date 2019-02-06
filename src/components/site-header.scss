@@ -17,7 +17,7 @@
 
 .nav_content {
   @extend %flexBetweenY;
-  padding: $spacing-3 $gutter;
+  padding: $spacing-3 var(--gutter);
   max-width: $max-width;
   margin: 0 auto;
 }

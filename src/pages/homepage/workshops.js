@@ -2,13 +2,13 @@ import React from 'react'
 import { Pane } from 'evergreen-ui'
 import { Link } from 'react-router-dom'
 import { SectionTitle, SectionSuperTitle } from 'components/typography'
-import { Container } from 'components'
+import { Container, Section } from 'components'
 import avatar from 'static/dave-giving-talk-cropped.jpg'
-import { WorkshopsLink } from '../workshops/hero'
+import WorkshopsLink from 'components/workshops-link'
 import s from './workshops.scss'
 
 export default () => (
-  <section className={s.section}>
+  <Section className={s.section}>
     <Container>
       <div className={s.layout}>
         <figure className={s.avatar}>
@@ -21,7 +21,7 @@ export default () => (
             </SectionSuperTitle>
             <SectionTitle className={s.section_title}>
               Build resilience and inspire hope
-              <br />
+              <br className={s.section_title_br} />
               in your teams and organizations
             </SectionTitle>
           </Link>
@@ -31,5 +31,5 @@ export default () => (
         </div>
       </div>
     </Container>
-  </section>
+  </Section>
 )

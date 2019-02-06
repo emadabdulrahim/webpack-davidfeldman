@@ -1,7 +1,7 @@
 @import '../../styles/_variables';
 
 .section {
-  padding: $spacing-12 0;
+  padding: $spacing-13 0;
   box-shadow: inset 0 5px 0 -2px $brown-base;
   margin-bottom: $spacing-5;
 }
@@ -37,9 +37,10 @@
 }
 
 .intro_blurb {
+  max-width: 33em;
   position: relative;
   font-family: $font-serif;
-  max-width: 33em;
+  text-align: center;
 
   &::after {
     content: '';
@@ -62,7 +63,7 @@
 
 @include media-phone-only {
   .section {
-    padding: $spacing-11 0;
+    padding: $spacing-12 0;
   }
 
   .avatar {
@@ -75,6 +76,8 @@
   }
 
   .intro_blurb {
+    text-align: left;
+
     &::after {
       height: 70px;
     }

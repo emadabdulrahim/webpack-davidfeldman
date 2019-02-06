@@ -32,33 +32,6 @@ $border-muted: 1px solid #6756434a;
   flex: 1;
 }
 
-.cta_container {
-  position: relative;
-  display: flex;
-  font-size: $font-size-8;
-  color: lighten($brown-base, 15%);
-}
-
-.cta_icon.cta_icon {
-  @include square(20px);
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translate(-160%, -50%);
-}
-
-.cta {
-  font-size: $font-size-8;
-  text-transform: initial;
-  letter-spacing: 0.02em;
-  font-weight: $font-semi;
-  color: currentColor;
-}
-
-.cta_text {
-  color: $color-main-light;
-}
-
 .content {
   border-top: $border-muted;
   border-bottom: $border-muted;

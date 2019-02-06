@@ -20,6 +20,12 @@ $desktop: 1200px;
   }
 }
 
+@mixin media-tablet-portait-down {
+  @media (max-width: $tablet) {
+    @content;
+  }
+}
+
 @mixin media-tablet-landscape-up {
   @media (min-width: $tablet) {
     @content;

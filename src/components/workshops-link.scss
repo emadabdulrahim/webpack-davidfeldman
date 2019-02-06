@@ -1,0 +1,39 @@
+@import '../styles/_variables';
+
+.cta_container {
+  position: relative;
+  display: flex;
+  font-size: var(--font-size-8);
+  color: lighten($brown-base, 15%);
+}
+
+.cta_icon.cta_icon {
+  @include square(20px);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-160%, -50%);
+}
+
+.cta {
+  font-size: var(--font-size-8);
+  text-transform: initial;
+  letter-spacing: 0.02em;
+  font-weight: $font-semi;
+  color: currentColor;
+}
+
+.cta_text {
+  color: $color-main-light;
+}
+
+@include media-phone-only {
+  .cta_text {
+    display: none;
+  }
+
+  .cta_icon.cta_icon {
+    @include square(16px);
+    transform: translate(-160%, -40%);
+  }
+}

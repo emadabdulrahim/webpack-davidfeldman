@@ -22,7 +22,7 @@ const NewsletterForm = () => (
             marginBottom={0}
           />
         </div>
-        <DFButton className={s.button} large type="submit">
+        <DFButton className={s.subscribe_button} large type="submit">
           Subscribe
         </DFButton>
       </form>

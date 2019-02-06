@@ -3,6 +3,7 @@ import DFButton from 'components/button'
 import { SectionTitle, SectionSuperTitle } from 'components/typography'
 import { Container } from 'components'
 import Link, { IconExternalLink } from 'components/link'
+import WorkshopsLink from 'components/workshops-link'
 import { Icon } from 'evergreen-ui'
 import avatar from 'static/dave-giving-talk-cropped.jpg'
 import YouTube from 'react-youtube'
@@ -97,16 +98,6 @@ class YoutubeVideos extends React.Component {
     )
   }
 }
-
-export const WorkshopsLink = ({ className, link }) => (
-  <div className={`${s.cta_container} ${className}`}>
-    <Icon className={s.cta_icon} icon="circle-arrow-right" />
-    <a className={s.cta} href={link}>
-      Invite Dr. Feldman&nbsp;
-    </a>
-    <span className={s.cta_text}>to speak for your organization</span>
-  </div>
-)
 
 export default () => (
   <section className={s.section}>

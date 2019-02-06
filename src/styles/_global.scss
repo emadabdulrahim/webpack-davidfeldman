@@ -1,5 +1,4 @@
-@import './_colors';
-@import './_typography';
+@import './_variables';
 
 a {
   color: unset;
@@ -25,4 +24,79 @@ body {
 
   text-size-adjust: 100%;
   text-rendering: optimizeLegibility;
+}
+
+:root {
+  --font-size-15: #{$font-size-15};
+  --font-size-14: #{$font-size-14};
+  --font-size-13: #{$font-size-13};
+  --font-size-12: #{$font-size-12};
+  --font-size-11: #{$font-size-11};
+  --font-size-10: #{$font-size-10};
+  --font-size-9: #{$font-size-9};
+  --font-size-8: #{$font-size-8};
+  --font-size-7: #{$font-size-7};
+  --font-size-6: #{$font-size-6};
+  --font-size-5: #{$font-size-5};
+  --font-size-4: #{$font-size-4};
+  --font-size-3: #{$font-size-3};
+  --font-size-2: #{$font-size-2};
+  --font-size-1: #{$font-size-1};
+
+  --line-height-heading: #{$line-height-heading};
+
+  --gutter: #{$spacing-5};
+  --section-padding: #{$spacing-11};
+  --section-margin: #{$spacing-7};
+
+  --font-hero: #{$font-size-14};
+  --font-section-title: #{$font-size-12};
+  --font-section-blurb: #{$font-size-7};
+  --font-blurb-large: #{$font-size-6};
+  --font-blurb-normal: #{$font-size-5};
+  --font-blurb-small: #{$font-size-4};
+
+  --button-padding: 24px;
+}
+
+@include media-tablet-portait-only {
+  :root {
+    --font-hero: #{$font-size-13};
+    --font-section-title: #{$font-size-11};
+    --font-size-4: #{$font-size-3};
+
+    --section-padding: #{$spacing-9};
+  }
+}
+
+@include media-phone-only {
+  :root {
+    --font-size-15: #{$font-size-13};
+    --font-size-14: #{$font-size-11};
+    --font-size-13: #{$font-size-10};
+    --font-size-12: #{$font-size-9};
+    --font-size-11: #{$font-size-8};
+    --font-size-10: #{$font-size-8};
+    --font-size-9: #{$font-size-7};
+    --font-size-8: #{$font-size-7};
+    --font-size-7: #{$font-size-6};
+    --font-size-6: #{$font-size-5};
+    --font-size-5: #{$font-size-4};
+    --font-size-4: #{$font-size-2};
+    --font-size-3: #{$font-size-2};
+    --font-size-2: #{$font-size-2};
+    --font-size-1: #{$font-size-1};
+
+    --line-height-heading: 1.1;
+
+    --font-hero: #{$font-size-11};
+    --font-section-title: #{$font-size-9};
+    --font-section-blurb: #{$font-size-5};
+    --font-blurb-large: #{$font-size-5};
+    --font-blurb-normal: #{$font-size-4};
+    --font-blurb-small: #{$font-size-3};
+
+    --section-padding: #{$spacing-8};
+    --section-margin: #{$spacing-6};
+  }
 }

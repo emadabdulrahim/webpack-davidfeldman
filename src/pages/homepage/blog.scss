@@ -135,12 +135,14 @@
 
 @include media-phone-only {
   .heading_container {
-    margin-bottom: $spacing-7;
+    margin-bottom: $spacing-6;
   }
 
   .feed_wrapper {
-    padding-left: $spacing-5;
+    padding-top: $spacing-5;
+    padding-left: 0;
     margin-bottom: $spacing-8;
+    box-shadow: $brown-base 0px 3px 0px -1px inset;
   }
 
   .post_date {

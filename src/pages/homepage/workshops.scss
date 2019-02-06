@@ -1,9 +1,8 @@
 @import '../../styles/_variables';
 
 .section {
-  margin-top: 32px;
-  padding: 80px 0;
-  background-color: #1b1917;
+  background-color: $color-main-pitchdark;
+  margin-bottom: 0;
 }
 
 .layout {
@@ -26,9 +25,30 @@
 
 .section_title {
   color: $color-text-lightest;
-  margin-bottom: 1.5em;
 }
 
 .link {
   justify-content: flex-end;
+}
+
+@include media-tablet-portait-down {
+  .layout {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+
+  .avatar {
+    max-width: 300px;
+    margin-top: $spacing-6;
+  }
+
+  .section_title_br {
+    display: none;
+  }
+}
+
+@include media-tablet-landscape-up {
+  .section_title {
+    margin-bottom: 1.5em;
+  }
 }

@@ -51,12 +51,15 @@ $color-input_placeholder: darken($color-main-light, 0%);
   }
 
   input {
+    --font-size: #{$font-size-7};
+    --width: 400px;
     @extend %newsletter_form;
-    font-size: $font-size-7;
+
+    font-size: var(--font-size);
     padding-left: 48px;
     padding-right: 16px;
     color: $color-main-lightest;
-    width: 400px;
+    width: var(--width);
     border-right-width: 1px;
 
     &::placeholder {
@@ -75,8 +78,10 @@ $color-input_placeholder: darken($color-main-light, 0%);
   }
 }
 
-.button {
-  font-size: $font-size-6;
+.subscribe_button {
+  --font-size: #{$font-size-6};
+
+  font-size: var(--font-size);
   color: $color-main-lightest;
   border: 2px solid $color-main-lightest;
   font-weight: $font-semi;
@@ -103,7 +108,7 @@ $color-input_placeholder: darken($color-main-light, 0%);
   left: 0;
   top: 50%;
   fill: $color-input_placeholder !important;
-  transform: translate(18px, -50%);
+  transform: translate(18px, -45%);
 }
 
 .toaster.toaster {
@@ -118,5 +123,18 @@ $color-input_placeholder: darken($color-main-light, 0%);
 
   .blurb {
     font-size: $font-size-6;
+  }
+
+  .form {
+    --input-height: 50px;
+
+    input {
+      --font-size: #{$font-size-5};
+      --width: 240px;
+    }
+  }
+
+  .subscribe_button {
+    --font-size: #{$font-size-5};
   }
 }
