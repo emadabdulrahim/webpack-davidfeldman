@@ -47,21 +47,19 @@
 }
 
 .text {
-  --logo-font-size: #{$font-size-6};
-
   margin-top: -2px;
-  font-size: var(--logo-font-size);
+  font-size: var(--font-size-6);
   letter-spacing: 0.06em;
   font-weight: $font-normal;
   color: var(--logo-color);
 }
 
-@media (max-width: 700px) {
+@include media-tablet-portait-down {
   .container {
-    --size: 28px;
+    --size: 48px;
   }
 
   .text {
-    --logo-font-size: #{$font-size-3};
+    margin-top: 0px;
   }
 }

@@ -1,8 +1,7 @@
 @import '../../styles/_variables';
 
 .section {
-  padding: $spacing-12 0;
-  background-color: #1b1917;
+  background-color: $color-main-pitchdark;
   box-shadow: inset 0 5px 0 -2px $brown-base;
   padding-bottom: 200px;
 }
@@ -33,4 +32,21 @@
   max-width: 500px;
   margin-left: $spacing-7;
   width: 100%;
+}
+
+@include media-tablet-portait-down {
+  .section {
+    padding: $spacing-12 0;
+  }
+
+  .layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .avatar {
+    margin-top: $spacing-5;
+    margin-left: 0;
+    max-width: 300px;
+  }
 }

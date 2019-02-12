@@ -7,7 +7,7 @@
 }
 
 .content_container {
-  padding: 96px 0;
+  padding: $spacing-12 0;
   max-width: 700px;
   margin: auto;
 }
@@ -15,22 +15,21 @@
 .content {
   font-family: $font-display;
   border-bottom: 1px solid $color-border-light;
-  margin-bottom: 40px;
+  margin-bottom: $spacing-6;
 }
 
 %paragraph {
-  margin-bottom: 1.5em;
+  font-size: var(--font-size-8);
+  margin-bottom: 1.25em;
 }
 
 .blurb_big {
   @extend %paragraph;
-  font-size: $font-size-8;
   font-weight: 500;
 }
 
 .blurb {
   @extend %paragraph;
-  font-size: $font-size-8;
 }
 
 .cta {
@@ -41,6 +40,14 @@
 .button_group {
   display: flex;
   justify-content: space-between;
+
+  > * {
+    margin-bottom: $spacing-5;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
 }
 
 .button_outline {
@@ -53,4 +60,22 @@
   font-weight: 500;
   margin-left: 8px;
   letter-spacing: 0.02em;
+}
+
+@include media-tablet-portait-down {
+  .section {
+    margin-top: -88px;
+  }
+
+  .content_container {
+    padding: $spacing-6 0;
+  }
+
+  .button_group {
+    flex-direction: column;
+  }
+
+  .button_outline {
+    width: 100%;
+  }
 }
