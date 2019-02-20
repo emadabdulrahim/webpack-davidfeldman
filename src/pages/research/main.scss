@@ -7,7 +7,7 @@
 }
 
 .research_content {
-  padding: $spacing-9 0;
+  padding: $spacing-9 var(--gutter);
   max-width: $max-width-wide;
   margin: 0 auto;
 }
@@ -25,7 +25,7 @@
 
 .research_paper {
   color: $color-text-heading;
-  padding: 24px;
+  padding: $spacing-6;
   box-shadow: 0 0 0 1px $color-main-midlight;
 
   &:hover {
@@ -40,14 +40,14 @@
 
 .paper_name {
   margin-bottom: 0.25em;
-  font-size: $font-size-7;
+  font-size: var(--font-size-7);
   font-weight: $font-semi;
 }
 
 .paper_journal {
   color: $brown-base;
   margin-bottom: 1em;
-  font-size: $font-size-6;
+  font-size: var(--font-size-6);
 }
 
 .paper_author {
@@ -84,21 +84,55 @@
 }
 
 .blurb {
-  font-size: $font-section-blurb;
+  font-size: var(--font-section-blurb);
   margin-bottom: 1em;
 }
 
 .contact_heading {
   text-align: center;
-  margin-bottom: 56px;
+  margin-bottom: $spacing-10;
 }
 
 .contact {
-  padding: $spacing-9 0;
+  padding: $spacing-9 var(--gutter);
   max-width: 700px;
   margin: 0 auto;
 }
 
 .form {
   width: 100%;
+}
+
+@include media-tablet-portait-down {
+  .hero {
+    padding-bottom: $spacing-4;
+  }
+
+  .section_body {
+    margin-bottom: $spacing-7;
+  }
+
+  .research_content {
+    padding-top: $spacing-7;
+    padding-bottom: $spacing-7;
+  }
+
+  .contact {
+    padding-top: $spacing-7;
+    padding-bottom: $spacing-7;
+  }
+
+  .contact_heading {
+    text-align: left;
+  }
+
+  .research_papers {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: $spacing-5;
+  }
+
+  .research_paper {
+    padding: $spacing-4;
+  }
 }

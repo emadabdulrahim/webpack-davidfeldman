@@ -97,3 +97,16 @@ $color-input_placeholder: lighten($color-border-medium, 12%);
 .success_message_title {
   color: $color-text-light;
 }
+
+@include media-phone-only {
+  .input_group {
+    flex-direction: column;
+  }
+
+  .input_field {
+    & + & {
+      margin-top: $spacing-7;
+      margin-left: 0;
+    }
+  }
+}

@@ -32,9 +32,8 @@ export default () => (
               Podcast
             </SectionSuperTitle>
             <iframe
+              className={s.podcast_frame}
               title="Psychology in 10 Minutes"
-              width="500"
-              height="545"
               scrolling="no"
               frameBorder="yes"
               src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/users/308292267&color=%23a25719&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true"

@@ -71,7 +71,7 @@ class YoutubeVideos extends React.Component {
             {...buttonProps}
           >
             <PlayIcon />
-            <span>The Power of Hope at Peres Academic Center, Tel Aviv</span>
+            <span>The Power of Hope, Tel Aviv</span>
           </DFButton>
         </div>
 
@@ -127,7 +127,7 @@ export default () => (
           among many others.
         </p>
         <div>
-          <p className={s.blurb}>
+          <p className={s.blurb_big}>
             Dr. Feldman speaks on diverse topics related to how people maintain
             a sense of hope and strive for personal meaning even in the midst of
             adversity. These topics include:

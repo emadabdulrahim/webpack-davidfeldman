@@ -13,5 +13,3 @@ export const Container = ({ children, className, ...rest }) => (
     {children}
   </div>
 )
-
-export const Separator = () => <div className={s.separator} />

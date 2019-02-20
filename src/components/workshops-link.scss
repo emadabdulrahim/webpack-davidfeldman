@@ -12,7 +12,7 @@
   position: absolute;
   top: 50%;
   left: 0;
-  transform: translate(-160%, -50%);
+  transform: translate(-160%, -38%);
 }
 
 .cta {
@@ -28,12 +28,19 @@
 }
 
 @include media-phone-only {
+  .cta_container {
+    align-items: center;
+  }
+
   .cta_text {
     display: none;
   }
 
   .cta_icon.cta_icon {
+    position: static;
     @include square(16px);
-    transform: translate(-160%, -40%);
+    transform: none;
+    margin-top: $spacing-1;
+    margin-right: $spacing-3;
   }
 }

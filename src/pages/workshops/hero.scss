@@ -35,19 +35,13 @@ $border-muted: 1px solid #6756434a;
 .content {
   border-top: $border-muted;
   border-bottom: $border-muted;
-  padding: 48px 0;
+  padding: 1.5em 0;
+  font-size: var(--font-size-9);
   color: $color-text-midlight;
 }
 
 .blurb_big {
-  font-size: $font-size-9;
   margin-bottom: 1em;
-}
-
-.blurb {
-  font-size: $font-size-9;
-  max-width: 35em;
-  margin-bottom: 1.5em;
 }
 
 .topics_list {
@@ -57,7 +51,7 @@ $border-muted: 1px solid #6756434a;
 }
 
 .list_item {
-  font-size: $font-size-7;
+  font-size: var(--font-size-7);
 
   & + & {
     margin-top: 0.5em;
@@ -122,16 +116,16 @@ $border-muted: 1px solid #6756434a;
 }
 
 .other_links {
-  margin-bottom: 48px;
-  padding-bottom: 48px;
+  margin-bottom: $spacing-8;
+  padding-bottom: $spacing-8;
   border-bottom: $border-muted;
 }
 
 .section_subtitle {
-  font-size: $font-size-9;
+  font-size: var(--font-size-9);
   font-family: $font-display;
   color: $color-text-light;
-  margin-bottom: 0.5em;
+  margin-bottom: 0.35em;
 }
 
 .small_link {
@@ -139,11 +133,12 @@ $border-muted: 1px solid #6756434a;
   display: inline-block;
   text-transform: none;
   letter-spacing: 0.02em;
-  font-size: $font-size-7;
+  font-size: var(--font-size-7);
 }
 
 .other_talks_list {
-  padding: $spacing-5 0;
+  padding: 0.5em 0;
+  font-size: var(--font-size-5);
 }
 
 .other_talk_list_item {
@@ -166,11 +161,74 @@ $border-muted: 1px solid #6756434a;
 
 .section_blurb {
   max-width: 20em;
-  font-size: $font-size-7;
+  font-size: var(--font-size-7);
 }
 
 .form {
   flex: 1.5;
   margin-top: 16px;
   margin-left: 48px;
+}
+
+@include media-tablet-portait-down {
+  .contact_layout {
+    flex-direction: column;
+  }
+
+  .form {
+    margin-top: $spacing-7;
+    margin-left: 0;
+  }
+}
+
+@include media-tablet-portait-only {
+  .heading_container {
+    margin-top: 0;
+  }
+
+  .avatar {
+    flex: 0.6;
+  }
+}
+
+@include media-phone-only {
+  .layout {
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .heading_container {
+    margin-top: 0;
+  }
+
+  .avatar {
+    margin-top: $spacing-6;
+    max-width: 250px;
+  }
+
+  .topics_list {
+    column-count: 1;
+  }
+
+  .video_section {
+    padding: $spacing-6 0;
+  }
+
+  .video_buttons_container {
+    flex-direction: column;
+    margin-bottom: $spacing-5;
+  }
+
+  .video_button {
+    & + & {
+      margin-left: 0;
+      margin-top: $spacing-4;
+    }
+  }
+
+  .other_links {
+    margin-bottom: $spacing-5;
+    padding-bottom: $spacing-5;
+  }
 }
